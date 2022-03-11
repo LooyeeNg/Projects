@@ -1,4 +1,5 @@
 import numpy as np
+import matplotlib.pyplot as plt
 # Numpy is imported; seed is set
 
 # Initialize all_walks (don't change this line)
@@ -24,5 +25,19 @@ for i in range(10):
     # Append random_walk to all_walks
     all_walks.append(random_walk)
 
-# Print all_walks
-print(all_walks)
+# Convert all_walks to Numpy array: np_aw
+np_aw = np.array(all_walks)
+
+# Plot np_aw and show
+plt.plot(np_aw)
+plt.show()
+
+# Clear the figure
+plt.clf()
+
+# Transpose np_aw: np_aw_t
+np_aw_t = np.transpose(np_aw)
+
+# Plot np_aw_t and show
+plt.plot(np_aw_t)
+plt.show()
