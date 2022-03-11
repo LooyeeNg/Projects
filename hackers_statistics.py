@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 all_walks = []
 
 # Simulate random walk 10 times
-for i in range(250):
+for i in range(500):
 
     # Code from before
     random_walk = [0]
@@ -30,19 +30,12 @@ for i in range(250):
     # Append random_walk to all_walks
     all_walks.append(random_walk)
 
-# Convert all_walks to Numpy array: np_aw
-np_aw = np.array(all_walks)
+# Create and plot np_aw_t
+np_aw_t = np.transpose(np.array(all_walks))
 
-# Plot np_aw and show
-plt.plot(np_aw)
-plt.show()
+# Select last row from np_aw_t: ends
+ends = np_aw_t[-1]
 
-# Clear the figure
-plt.clf()
-
-# Transpose np_aw: np_aw_t
-np_aw_t = np.transpose(np_aw)
-
-# Plot np_aw_t and show
-plt.plot(np_aw_t)
+# Plot histogram of ends, display plot
+plt.hist(ends)
 plt.show()
