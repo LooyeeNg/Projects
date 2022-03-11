@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 all_walks = []
 
 # Simulate random walk 10 times
-for i in range(10):
+for i in range(250):
 
     # Code from before
     random_walk = [0]
@@ -20,6 +20,11 @@ for i in range(10):
             step = step + 1
         else:
             step = step + np.random.randint(1, 7)
+
+        # Implement clumsiness
+        if np.random.rand() <= 0.001:
+            step = 0
+
         random_walk.append(step)
 
     # Append random_walk to all_walks
