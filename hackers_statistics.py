@@ -39,3 +39,5 @@ ends = np_aw_t[-1]
 # Plot histogram of ends, display plot
 plt.hist(ends)
 plt.show()
+
+print("Chances to reach 60 steps high is " + str(int(np.mean(ends > 60)*100)) + "%.")
